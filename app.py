@@ -4,10 +4,10 @@ from collections import Counter
 
 
 def datatake(filename):
-    regi = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
+    regip = r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
     with codecs.open(filename, 'r', 'utf-8') as f:
         log = f.read()
-        ipl = re.findall(regi, log)
+        ipl = re.findall(regip, log)
     return Counter(ipl)
 
 def wcsv(count):
